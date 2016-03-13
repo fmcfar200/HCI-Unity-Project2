@@ -5,7 +5,6 @@ public class BinScript : MonoBehaviour {
 
 	GameObject gameManager;
 	ScoreScript playerScoreScript;
-	ItemSpawnScript itemSpawnScript;
 
 	void Start()
 	{
@@ -78,41 +77,42 @@ public class BinScript : MonoBehaviour {
 				}
 			}
 		}
-		if (playerScoreScript.playerScore == 40)
-		{
-			GameObject itemSpawn = GameObject.Find("FoodSpawn");
-			if (itemSpawn != null)
-			{
-				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
-				itemSpawnScript.SpeedUpAndLowerDelay(0.1f,0.05f);
-			}
-		}
-		if (playerScoreScript.playerScore == 80)
-		{
-			GameObject itemSpawn = GameObject.Find("FoodSpawn");
-			if (itemSpawn != null)
-			{
-				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
-				itemSpawnScript.SpeedUpAndLowerDelay(0.1f,0.1f);
-			}
-		}
-		if (playerScoreScript.playerScore == 120)
-		{
-			GameObject itemSpawn = GameObject.Find("FoodSpawn");
-			if (itemSpawn != null)
-			{
-				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
-				itemSpawnScript.SpeedUpAndLowerDelay(0.2f,0.1f);
-			}
-		}
-		if (playerScoreScript.playerScore == 160)
-		{
-			GameObject itemSpawn = GameObject.Find("FoodSpawn");
-			if (itemSpawn != null)
-			{
-				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
-				itemSpawnScript.SpeedUpAndLowerDelay(0.1f,0.1f);
-			}
-		}
+
+//		if (playerScoreScript.playerScore == 40 || playerScoreScript.playerScore == 60)
+//		{
+//			GameObject itemSpawn = GameObject.Find("FoodSpawn");
+//			if (itemSpawn != null)
+//			{
+//				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
+//				itemSpawnScript.SpeedUpAndLowerDelay(0.1f,0.1f);
+//			}
+//		}
+//		if (playerScoreScript.playerScore == 80)
+//		{
+//			GameObject itemSpawn = GameObject.Find("FoodSpawn");
+//			if (itemSpawn != null)
+//			{
+//				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
+//				itemSpawnScript.SpeedUpAndLowerDelay(0.1f,0.1f);
+//			}
+//		}
+//		if (playerScoreScript.playerScore == 120)
+//		{
+//			GameObject itemSpawn = GameObject.Find("FoodSpawn");
+//			if (itemSpawn != null)
+//			{
+//				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
+//				itemSpawnScript.SpeedUpAndLowerDelay(0.2f,0.1f);
+//			}
+//		}
+//		if (playerScoreScript.playerScore == 160)
+//		{
+//			GameObject itemSpawn = GameObject.Find("FoodSpawn");
+//			if (itemSpawn != null)
+//			{
+//				itemSpawnScript = itemSpawn.GetComponent<ItemSpawnScript>();
+//				itemSpawnScript.SpeedUpAndLowerDelay(0.1f,0.1f);
+//			}
+//		}
 	}
 }

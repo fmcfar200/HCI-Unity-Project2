@@ -43,12 +43,11 @@ public class MenuScript : MonoBehaviour {
 				scoreScriptScoreObject = scoreObject.GetComponent<ScoreScript>();
 
 				scoreScriptScoreObject.playerScore = scoreScriptGameManager.playerScore;
+				scoreScriptScoreObject.scoreText.text = scoreScriptScoreObject.playerScore.ToString();
+				Destroy(gameManager.gameObject);
 			
 			}
-			else
-			{
-				Debug.LogError("GAME MANAGER NOT FOUND");
-			}
+
 		}
 	}
 

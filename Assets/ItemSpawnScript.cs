@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class ItemSpawnScript : MonoBehaviour {
 
 	//spawn amount,delay and list
-	public int spawnAmount = 10;
+	public int spawnAmount = 50;
 	public float spawnDelay = 2.0f;
 	public List<GameObject> spawnObjects = new List<GameObject>();
 
@@ -16,7 +16,8 @@ public class ItemSpawnScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+		spawnAmount = 50;
+		spawnDelay = 2.0f;
 		StartCoroutine (SpawnObjects ());
 	}
 
@@ -27,6 +28,13 @@ public class ItemSpawnScript : MonoBehaviour {
 			spawnObjects[i].GetComponent<ItemScript>().speed += speedUpAmount;
 		}
 		spawnDelay -= lowerDelayAmount;
+	}
+	public void ResetItemSpeed()
+	{
+		for (int i = 0; i < spawnObjects.Count;i++)
+		{
+			spawnObjects[i].GetComponent<ItemScript>().speed = 0.5f;
+		}
 	}
 	
 	// Update is called once per frame

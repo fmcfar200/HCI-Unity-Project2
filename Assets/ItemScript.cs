@@ -19,6 +19,7 @@ public class ItemScript : MonoBehaviour {
 		if (target == null) {
 			Debug.LogError("MISSING FOOD END TARGET");
 		}
+
 	
 	}
 	
